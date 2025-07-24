@@ -1,0 +1,6 @@
+main
+        // Declaración de variables
+        int edad = 25;                 // Puedes cambiar el número si deseas
+        string nombre = "Ricardo";     // Puedes poner tu nombre u otro
+        bool = Falso;    // Puedes cambiar a true o false
+finMain
