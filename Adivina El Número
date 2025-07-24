@@ -1,0 +1,45 @@
+main
+        // Generar número aleatorio entre 1 y 100
+        Random random = new Random();
+        int numeroSecreto = random.Next(1, 101);
+
+        int intentos = 7;
+        bool adivinado = false;
+
+        Console.WriteLine("¡Adivina el número secreto entre 1 y 100!");
+        Console.WriteLine("Tienes " + intentos + " intentos.\n");
+
+        for (int i = 1; i <= intentos; i++)
+        {
+            Console.Write("Intento #" + i + ": ");
+            int intentoUsuario;
+
+            // Validar que la entrada sea un número
+            while (!int.TryParse(Console.ReadLine(), out intentoUsuario))
+            {
+                Console.Write("Por favor, escribe un número válido: ");
+            }
+
+            if (intentoUsuario == numeroSecreto)
+            {
+                Console.WriteLine("¡Felicidades! Adivinaste el número.");
+                adivinado = true;
+                break;
+            }
+            else if (intentoUsuario < numeroSecreto)
+            {
+                Console.WriteLine("El número secreto es mayor.\n");
+            }
+            else
+            {
+                Console.WriteLine("El número secreto es menor.\n");
+            }
+        }
+
+        if (!adivinado)
+        {
+            Console.WriteLine("Lo siento, se te acabaron los intentos. El número era: " + numeroSecreto);
+        }
+
+        Console.WriteLine("Gracias por jugar.");
+finMain
