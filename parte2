@@ -1,0 +1,26 @@
+main
+  // Declaración de variables
+        int edad = 20;
+        string nombre = "Ricardo";
+        bool tieneLicencia = false;
+
+        // Condición sobre la edad
+        if (edad >= 18)
+        {
+            Console.WriteLine(nombre + " puede conducir");
+        }
+        else
+        {
+            Console.WriteLine(nombre + " es menor de edad");
+        }
+
+        // Condición sobre la licencia
+        if (tieneLicencia == true)
+        {
+            Console.WriteLine(nombre + " tiene licencia");
+        }
+        else
+        {
+            Console.WriteLine(nombre + " no tiene licencia");
+        }
+finMain
